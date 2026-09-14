@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,28 +8,27 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:radial-gradient(ellipse at center,#1a0011 0%,#000 70%);overflow:hidden;font-family:'Georgia',serif;min-height:100vh}
 
-.bg-particles{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0}
 .hearts-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:1}
 
 .content{position:relative;z-index:10;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;text-align:center;padding:20px}
 
-.love-text{font-size:3.5rem;font-weight:bold;color:#ff2d75;text-shadow:0 0 20px #ff2d75,0 0 40px #ff2d75,0 0 80px #ff0066;animation:loveAppear 2s ease-out forwards,pulse 2s ease-in-out infinite 2s;opacity:0;letter-spacing:5px;margin-bottom:10px}
+.love-text{font-size:4rem;font-weight:bold;color:#ff2d75;text-shadow:0 0 20px #ff2d75,0 0 40px #ff2d75,0 0 80px #ff0066;animation:loveAppear 2s ease-out forwards,pulse 2s ease-in-out infinite 2s;opacity:0;letter-spacing:8px;margin-bottom:10px}
 
-.maya-name{font-size:6rem;font-weight:900;background:linear-gradient(45deg,#ff0066,#ff6b9d,#ff0066,#ff3385);background-size:300% 300%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:gradientMove 3s ease infinite,mayaAppear 2s ease-out 1s forwards,pulse 2s ease-in-out infinite 3s;opacity:0;letter-spacing:15px;text-transform:uppercase}
+.maya-name{font-size:7rem;font-weight:900;background:linear-gradient(45deg,#ff0066,#ff6b9d,#ff0066,#ff3385);background-size:300% 300%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:gradientMove 3s ease infinite,mayaAppear 2s ease-out 1s forwards,pulse 2s ease-in-out infinite 3s;opacity:0;letter-spacing:20px;text-transform:uppercase}
 
-.subtitle{font-size:1.8rem;color:#ff6b9d;margin-top:20px;opacity:0;animation:fadeInUp 2s ease-out 2s forwards;text-shadow:0 0 10px #ff6b9d}
+.subtitle{font-size:2rem;color:#ff6b9d;margin-top:20px;opacity:0;animation:fadeInUp 2s ease-out 2s forwards;text-shadow:0 0 10px #ff6b9d}
 
-.message-box{margin-top:40px;padding:30px 50px;border:2px solid rgba(255,45,117,0.5);border-radius:20px;background:rgba(255,0,102,0.1);backdrop-filter:blur(10px);opacity:0;animation:fadeInUp 2s ease-out 3s forwards}
+.message-box{margin-top:40px;padding:30px 60px;border:2px solid rgba(255,45,117,0.5);border-radius:20px;background:rgba(255,0,102,0.1);backdrop-filter:blur(10px);opacity:0;animation:fadeInUp 2s ease-out 3s forwards}
 
-.message-box p{font-size:1.3rem;color:#ffb3d1;line-height:2}
+.message-box p{font-size:1.4rem;color:#ffb3d1;line-height:2.2}
 
-.timeline{display:flex;gap:40px;margin-top:40px;opacity:0;animation:fadeInUp 2s ease-out 4s forwards}
+.timeline{display:flex;gap:50px;margin-top:40px;opacity:0;animation:fadeInUp 2s ease-out 4s forwards}
 
 .timeline-item{text-align:center;color:#ff6b9d}
 
 .timeline-icon{font-size:2.5rem;margin-bottom:8px;animation:bounce 2s ease-in-out infinite}
 
-.timeline-label{font-size:0.9rem;opacity:0.8}
+.timeline-label{font-size:1rem;opacity:0.8}
 
 .floating-hearts{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:5}
 
@@ -40,32 +39,19 @@ body{background:radial-gradient(ellipse at center,#1a0011 0%,#000 70%);overflow:
 .glow-circle{position:fixed;border-radius:50%;border:2px solid rgba(255,45,117,0.3);animation:glowExpand 4s ease-out infinite;pointer-events:none;z-index:2}
 
 @keyframes loveAppear{0%{opacity:0;transform:translateY(50px) scale(0.5)}100%{opacity:1;transform:translateY(0) scale(1)}}
-
 @keyframes mayaAppear{0%{opacity:0;transform:translateY(80px) scale(0.3) rotateX(90deg)}100%{opacity:1;transform:translateY(0) scale(1) rotateX(0)}}
-
 @keyframes gradientMove{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
-
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
-
 @keyframes fadeInUp{0%{opacity:0;transform:translateY(40px)}100%{opacity:1;transform:translateY(0)}}
-
 @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-
 @keyframes floatUp{0%{transform:translateY(100vh) rotate(0deg);opacity:0}10%{opacity:0.7}90%{opacity:0.7}100%{transform:translateY(-100px) rotate(720deg);opacity:0}}
-
 @keyframes sparkleAnim{0%{transform:scale(0);opacity:1}50%{transform:scale(1.5);opacity:1}100%{transform:scale(0);opacity:0}}
-
 @keyframes glowExpand{0%{transform:scale(0);opacity:1}100%{transform:scale(3);opacity:0}}
-
-.music-btn{position:fixed;top:20px;right:20px;z-index:200;background:rgba(255,45,117,0.3);border:2px solid #ff2d75;color:#fff;padding:10px 20px;border-radius:25px;cursor:pointer;font-size:1rem;transition:all 0.3s}
-
-.music-btn:hover{background:#ff2d75;transform:scale(1.1)}
 </style>
 </head>
 <body>
 
 <canvas class="hearts-canvas" id="heartsCanvas"></canvas>
-
 <div class="floating-hearts" id="floatingHearts"></div>
 
 <div class="content">
@@ -74,27 +60,27 @@ body{background:radial-gradient(ellipse at center,#1a0011 0%,#000 70%);overflow:
   <div class="subtitle">~ My Future Wife ~</div>
   
   <div class="message-box">
-    <p>à¦¤à§‹à¦®à¦¾à¦•à§‡ à¦­à¦¾à¦²à§‹à¦¬à¦¾à¦¸à¦¿ Maya ðŸŒ¹<br>
-    à¦¸à¦¬à¦¸à¦®à¦¯à¦¼ à¦¤à§‹à¦®à¦¾à¦° à¦ªà¦¾à¦¶à§‡ à¦¥à¦¾à¦•à¦¬à§‹ ðŸ’•<br>
-    You are my everything ðŸ’—</p>
+    <p>I love you so much Maya<br>
+    I will always be by your side<br>
+    You are my everything</p>
   </div>
   
   <div class="timeline">
     <div class="timeline-item">
-      <div class="timeline-icon">ðŸ’•</div>
-      <div class="timeline-label">First Meet</div>
+      <div class="timeline-icon">First Meet</div>
+      <div class="timeline-label">Our Beginning</div>
     </div>
     <div class="timeline-item">
-      <div class="timeline-icon">ðŸ’‘</div>
-      <div class="timeline-label">Together</div>
+      <div class="timeline-icon">Together</div>
+      <div class="timeline-label">Always</div>
     </div>
     <div class="timeline-item">
-      <div class="timeline-icon">ðŸ’</div>
-      <div class="timeline-label">Forever</div>
+      <div class="timeline-icon">Forever</div>
+      <div class="timeline-label">For Life</div>
     </div>
     <div class="timeline-item">
-      <div class="timeline-icon">â¤ï¸</div>
-      <div class="timeline-label">Love You</div>
+      <div class="timeline-icon">Love You</div>
+      <div class="timeline-label">My Heart</div>
     </div>
   </div>
 </div>
@@ -136,9 +122,7 @@ for(let i=0;i<60;i++)particles.push(createParticle());
 
 function animate(){
 ctx.clearRect(0,0,canvas.width,canvas.height);
-
 if(Math.random()<0.1)hearts.push(createHeart());
-
 for(let i=hearts.length-1;i>=0;i--){
 const h=hearts[i];
 h.y-=h.speed;
@@ -148,7 +132,6 @@ h.angle+=0.02;
 drawHeart(h.x,h.y,h.size,h.color,h.angle);
 if(h.y<-50)hearts.splice(i,1)
 }
-
 particles.forEach(p=>{
 p.x+=p.speedX;
 p.y+=p.speedY;
@@ -160,9 +143,7 @@ ctx.beginPath();
 ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
 ctx.fill()
 });
-
 ctx.globalAlpha=1;
-
 for(let i=0;i<particles.length;i++){
 for(let j=i+1;j<particles.length;j++){
 const dx=particles[i].x-particles[j].x;
@@ -176,25 +157,24 @@ ctx.moveTo(particles[i].x,particles[i].y);
 ctx.lineTo(particles[j].x,particles[j].y);
 ctx.stroke()
 }
-}
-}
-
+}}
 requestAnimationFrame(animate)
 }
 animate();
 
 const floatingContainer=document.getElementById('floatingHearts');
+const heartSymbols=['<3','<3','<3'];
 function createFloatingHeart(){
 const heart=document.createElement('div');
 heart.className='floating-heart';
-heart.innerHTML=['â¤ï¸','ðŸ’•','ðŸ’—','ðŸ’–','ðŸŒ¹'][Math.floor(Math.random()*5)];
+heart.textContent='<3';
 heart.style.left=Math.random()*100+'%';
 heart.style.animationDuration=(5+Math.random()*5)+'s';
-heart.style.fontSize=(1+Math.random()*2)+'rem';
+heart.style.color=colors[Math.floor(Math.random()*colors.length)];
 floatingContainer.appendChild(heart);
 setTimeout(()=>heart.remove(),10000)
 }
-setInterval(createFloatingHeart,500);
+setInterval(createFloatingHeart,400);
 
 document.addEventListener('mousemove',e=>{
 for(let i=0;i<2;i++){
@@ -209,15 +189,15 @@ setTimeout(()=>sparkle.remove(),1000)
 });
 
 document.addEventListener('click',e=>{
-for(let i=0;i<15;i++){
+for(let i=0;i<20;i++){
 const sparkle=document.createElement('div');
 sparkle.className='sparkle';
 sparkle.style.left=e.clientX+'px';
 sparkle.style.top=e.clientY+'px';
 sparkle.style.width='10px';
 sparkle.style.height='10px';
-const angle=(i/15)*Math.PI*2;
-const dist=40+Math.random()*60;
+const angle=(i/20)*Math.PI*2;
+const dist=50+Math.random()*80;
 sparkle.style.transition='all 0.8s ease-out';
 document.body.appendChild(sparkle);
 requestAnimationFrame(()=>{
